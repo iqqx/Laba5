@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			// 1
+			/*
+true
+false
+            */
+
+			// 2
+			(function () {
+				class Student {
+					constructor(name) {
+						this.name = name;
+					}
+				}
+				class Employee {
+					constructor(name) {
+						this.name = name;
+					}
+				}
+
+				let users = [
+					new Student("user1"),
+					new Employee("user2"),
+					new Student("user3"),
+					new Employee("user4"),
+					new Student("user5"),
+					new Employee("user6"),
+					new Student("user7"),
+				];
+
+				for (const user of users) if (user instanceof Employee) console.log(user.name);
+			})()
+		</script>
+	</head>
+</html>

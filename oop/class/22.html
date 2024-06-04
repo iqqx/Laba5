@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			(function () {
+				// 1
+				class Validator {
+					// 2
+					isEmail(raw) {
+						if (raw.split("@").length === 2) return true;
+						return false;
+					}
+
+					// 3
+					isDomain(raw) {
+						if (raw.split(".").length > 1) return true;
+						return false;
+					}
+
+					// 4
+					isNumber(raw) {
+						if (!isNaN(raw)) return true;
+						return false;
+					}
+				}
+			})();
+		</script>
+	</head>
+</html>
